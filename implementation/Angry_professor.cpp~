@@ -1,0 +1,22 @@
+#include<iostream>
+#include<algorithm>
+#include<string>
+
+using namespace std;
+
+int main(){
+  int students, threshold;
+  cin>>students>>threshold;
+  int on_time=0;
+  for(int i=0;i<students;i++){
+    int time;
+    cin>>time;
+    on_time=on_time+(time<=0);
+  }
+  if(on_time<threshold){
+    cout<<"YES";
+  }
+  else{
+    cout<<"NO";
+  }
+}

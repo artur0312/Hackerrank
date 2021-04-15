@@ -1,0 +1,25 @@
+#include<iostream>
+#include<algorithm>
+#include<string>
+
+using namespace std;
+
+int main(){
+  int n;
+  cin>>n;
+  int diag1=0;
+  int diag2=0;
+  int x;
+  for(int i=0;i<n;i++){
+    for(int j=0;j<n;j++){
+      cin>>x;
+      if(i==j){
+	diag1+=x;
+      }
+      if(i+j==n-1){
+	diag2+=x;
+      }
+    }
+  }
+  cout<<abs(diag1-diag2);
+}

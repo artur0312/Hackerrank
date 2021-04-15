@@ -1,0 +1,20 @@
+#include<iostream>
+#include<algorithm>
+#include<string>
+
+using namespace std;
+
+int main(){
+  int begin,end,k;
+  cin>>begin>>end>>k;
+  int beautiful=1;
+  for(int i=begin;i<=end;i++){
+    int reverse=stoi(reverse(to_string(i).begin(),to_string(i).end()));
+    if((i-reverse)%k==0){
+      beautiful++;
+    }
+  }
+  cout<<beautiful;
+  
+    
+}
